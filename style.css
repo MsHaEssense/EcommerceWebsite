@@ -186,12 +186,12 @@ a{
 
 @media screen and (max-width:500px) {
     .header p{
-        font-size: 5dvw;
+        font-size: 20px;
     }
 
     .menu-bar{
-        width: 6dvw;
-        height: 6dvw;
+        width: 30px;
+        height: 30px;
         display: none;
     }
 
@@ -326,6 +326,21 @@ h2{
     margin: 1dvw 0px;
 }
 
+@media screen and (max-width:600px) {
+    .second-body{
+        flex-wrap: wrap;
+    }
+
+    .second-body .img1, .img2, .img3{
+        width: 30dvw;
+        height: 30dvw;
+    }
+
+    .second-body h3{
+        font-size: 3dvw;
+    }
+}
+
 /* -----------------------------------SECOND BODY------------------------------------------------ */
 
 /* ----------------------------------THIRD BODY------------------------------------------------ */
@@ -349,15 +364,15 @@ h2{
 }
 
 .third-body .product-container img{
-    width: 10dvw;
-    height: 15dvw;
+    width: 15dvw;
+    height: 20dvw;
 }
 
 .img-center h4{
     width: 80%;
     margin: auto;
     font-weight: lighter;
-    font-size: 3dvw;
+    font-size: 2dvw;
 }
 
 .img-center{
@@ -368,6 +383,17 @@ h2{
     transform: scale(1.1);
     transition: 0.5s ease-out;
     cursor: pointer;
+}
+
+@media  screen and (max-width:800px) {
+    .third-body .product-container img{
+        width: 20dvw;
+        height: 30dvw;
+    }
+    
+    .img-center h4{
+        font-size: 3dvw;
+    }
 }
 
 /* -------------------------------------THIRD BODY----------------------------------------------- */
@@ -384,7 +410,7 @@ h2{
 }
 
 .about-us .texts h3{
-    font-size: 2dvw;
+    font-size: 3dvw;
 }
 
 .about-us .texts .a{
@@ -398,8 +424,9 @@ h2{
 /* ----------------------------------------ABOUT US---------------------------------------------- */
 .about-us{
     background-image: url(assets/picures/HOME-transformed.jpeg);
+    background-position: -20dvw;
     background-size: cover;
-    height: 30dvw;
+    height: 50dvw;
 }
 /* ------------------------------------------FOOTER--------------------------------------------- */
 
