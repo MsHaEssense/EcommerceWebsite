@@ -146,14 +146,11 @@ a{
     display: none;
     animation: slide 0.5s;
 }
-
 .menu-nav{
-    padding: 0.5dvw 0;
     display: none;
     background-color: #EBE7E5;
     width:100%;
     animation: top-slide2 0.5s;
-
 }
 
 .menu-popup ul{
@@ -228,12 +225,14 @@ a{
     from{
         position: absolute;
         z-index: 99;
-        top: -40%;
+        top: 0%;
+        height: 0%;
     }
     to{
         z-index: 99;
         position: absolute;
         top: 100%;
+        height: 1000%;
     }
 }
 
@@ -358,7 +357,7 @@ h2{
     width: 80%;
     margin: auto;
     font-weight: lighter;
-    font-size: 2dvw;
+    font-size: 3dvw;
 }
 
 .img-center{
