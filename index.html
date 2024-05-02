@@ -13,116 +13,504 @@
             <p>Adora Beauty Skincare</p>
         </div>
 
-        <div class="nav-container">
-            <ul id="navigation">
-                <li><a class="a" href="">HOME</a></li>
-                <li class="nav"><div><a class="products" onclick="popup1()">PRODUCTS <img class="dropdown-arrow" id="arrow1" src="assets/arrow.png"></a>
-                    <div class="nav-popup" id="popup1">
-                        <ul>
-                            <li><a href="">SERUM</a></li>
-                            <li><a href="">SOAP</a></li>
-                            <li><a href="">TONER</a></li>
-                            <li><a href="">FOAM</a></li>
-                            <li><a href="">CREAM</a></li>
+        <div class="navigation-holder" id="menu-popup">
+            <div class="nav-container">
+                <ul id="navigation">
+                    <li class="nav-link active" onclick="home(document.getElementById('homepage'))"><a>HOME</a></li>
+                    <li><a class="products" onclick="popup1()">PRODUCTS <img class="dropdown-arrow" id="arrow1" src="assets/arrow.png"></a>
+                        <ul class="nav-popup" id="popup1">
+                            <li class="nav-link" onclick="serumPage(document.getElementById('serum-page'))"><a>SERUM</a></li>
+                            <li class="nav-link" onclick="soapPage(document.getElementById('soap-page'))"><a>SOAP</a></li>
+                            <li class="nav-link" onclick="tonerPage(document.getElementById('toner-page'))"><a>TONER</a></li>
+                            <li class="nav-link" onclick="foamPage(document.getElementById('foam-page'))"><a>FOAM</a></li>
+                            <li class="nav-link" onclick="creamPage(document.getElementById('cream-page'))"><a>CREAM</a></li>
                         </ul>
-                    </div>
-                    </div>
-                </li>
-                <li><a href="">CONTACT</a></li>
-                <li><a href="">ABOUT</a></li>
-            </ul>
+                    </li>
+                    <li class="nav-link"><a>CONTACT</a></li>
+                    <li class="nav-link" onclick="smoothScroll(document.getElementById('aboutUs'))"><a>ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="user-cart">
+                <img class="nav-link" src="assets/shopping-cart.png" alt="" onclick="addToCart(document.getElementById('add-to-cart-container'))">
+                <img class="nav-link" src="assets/user.png" alt="" onclick="User(document.getElementById('user-container'))">
+            </div>
         </div>
 
-        <div class="user-cart">
-            <img src="assets/shopping-cart.png" alt="">
-            <img src="assets/user.png" alt="">
-        </div>
-        
         
         <img src="assets/menu-bar.png" class="menu-bar" id="rotate" onclick="toggleMenu()">
+    </div>
 
 
-        <div class="menu-popup" id="menu-popup">
-            <div class="menu-user-cart">
-                <img src="assets/shopping-cart.png" alt="">
-                <img src="assets/user.png" alt="">
-            </div>
-            <ul id="navigation">
-                <li><a href="">HOME</a></li>
-                <li class="nav"><div>
-                    <a href="#" class="products" onclick="popup()" style="display: flex; align-items: center; justify-content: center;" >PRODUCTS<img class="dropdown-arrow" id="arrow" src="assets/arrow.png"></a>
-                        <ul class="menu-nav" id="popup">
-                            <li><a href="#">SERUM</a></li>
-                            <li><a href="#">SOAP</a></li>
-                            <li><a href="#">TONER</a></li>
-                            <li><a href="#">FOAM</a></li>
-                            <li><a href="#">CREAM</a></li>
-                        </ul>
-                    </div>
-                </li>
-                <li><a href="">CONTACT</a></li>
-                <li><a href="">ABOUT</a></li>
-            </ul>
+    <div class="add-to-cart-container" id="add-to-cart-container">
+        <div class="contain">
+            <h1>Add to Cart</h1>
         </div>
     </div>
 
-    <div class="body">
-        <div class="img-container">
-            <h2>BE YOUR OWN KIND OF BEAUTIFUL</h2>
-            <img src="assets/picures/1.png" alt="">
-            <img src="assets/picures/2.webp" alt="">
-        </div>
-    </div>
-
-    <div class="second-body">
-        <div class="img1">
-            <div class="text-container"><h3>NEW</h3><h3>ARRIVALS</h3></div>
-            
-        </div>
-        <div class="img2">
-            <div class="text-container"><h3>BEST</h3><h3>SELLER</h3></div>
-        </div>
-        <div class="img3">
-            <div class="text-container"><h3>ON</h3><h3>SALE</h3></div>
-        </div>
-    </div>
-
-    <div class="third-body">
-        <div><h3>AVAILABLE PRODUCTS</h3></div>
-        <div class="product-container">
-            <div class="img-center">
-                <img src="assets/picures/10.jpg" alt="">
-                <h4>Serum P299.00</h4>
-            </div>
-            <div class="img-center">
-                <img src="assets/picures/9.webp" alt="">
-                <h4>Toner P125.00</h4>
-            </div>
-            <div class="img-center">
-                <img src="assets/picures/4.jpg" alt="">
-                <h4>Soap P129.00</h4>
-            </div>
-            <div class="img-center">
-                <img src="assets/picures/7.jpg" alt="">
-                <h4>Foam P349.00</h4>
-            </div>
-            <div class="img-center">
-                <img src="assets/picures/8.webp" alt="">
-                <h4>Cream P199.00</h4>
+    <div class="user-container" id="user-container">
+        <div class="contain">
+            <h1>User Profile</h1>
+            <h2>You have not logged in!</h2>
+            <div>
+                <button id="login" onclick="loginPage()">Login</button>
+                <button id="sign-up" onclick="signUpPage()">Sign-up</button>
             </div>
         </div>
     </div>
 
-    <div class="about-us">
+    <div class="sign-up-container" id="sign-up-container">
+        <div class="contain">
+            <h1>Sign-up</h1>
+            <h4>Basic Info</h4>
+            <input type="text" id="name" placeholder="Name">
+            <input type="text" id="contact" placeholder="Contact">
+            <textarea name="Address" id="address" placeholder="Address"></textarea>
+            <h4>Login Credentials</h4>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="signUp()">Sign Up</button>
+        </div>
+    </div>
+
+    <div class="login-container" id="login-container">
+        <div class="contain">
+            <h1>Login</h1>
+            <input type="text" id="username" placeholder="Username">
+            <input type="password" id="password" placeholder="Password">
+            <button onclick="login()">Login</button>
+        </div>
+    </div>
+
+    <div class="add-product" id="add-product">
+        <div class="add-product-container">
+            <h1>Add Product</h1>
+            <input type="text" id="productName" placeholder="Product Name">
+            <input type="text" id="productDescription" placeholder="Product Description">
+            <input type="text" id="productPrice" placeholder="Product Price">
+            <input type="file" id="productImage" accept="image/*">
+            <select name="" id="productType">
+                <option selected hidden>Select Product Type</option>
+                <option value="serum">Serum</option>
+                <option value="soap">Soap</option>
+                <option value="toner">Toner</option>
+                <option value="foam">Foam</option>
+                <option value="cream">Cream</option>
+            </select>
+            <button id="addProductBtn">Add Product</button>
+        </div>
+    </div>
+
+    <div id="homepage">
+        <div class="body">
+            <div class="img-container">
+                <h2>BE YOUR OWN KIND OF BEAUTIFUL</h2>
+                <img src="assets/picures/1.png" alt="">
+                <img src="assets/picures/2.webp" alt="">
+            </div>
+        </div>
+
+        <div class="second-body">
+            <div class="img1">
+                <div class="text-container"><h3>NEW</h3><h3>ARRIVALS</h3></div>
+            </div>
+            <div class="img2">
+                <div class="text-container"><h3>BEST</h3><h3>SELLER</h3></div>
+            </div>
+            <div class="img3">
+                <div class="text-container"><h3>ON</h3><h3>SALE</h3></div>
+            </div>
+        </div>
+
+        <div class="third-body">
+            <div><h3>AVAILABLE PRODUCTS</h3></div>
+            <div class="product-container">
+                <div class="img-center">
+                    <img src="assets/picures/10.jpg" alt="">
+                    <h4>Serum </h4>
+                </div>
+                <div class="img-center">
+                    <img src="assets/picures/9.webp" alt="">
+                    <h4>Toner </h4>
+                </div>
+                <div class="img-center">
+                    <img src="assets/picures/4.jpg" alt="">
+                    <h4>Soap</h4>
+                </div>
+                <div class="img-center">
+                    <img src="assets/picures/7.jpg" alt="">
+                    <h4>Foam</h4>
+                </div>
+                <div class="img-center">
+                    <img src="assets/picures/8.webp" alt="">
+                    <h4>Cream</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="serum-page">
+        <div class="contain">
+            <h1>Serum</h1>
+            <input type="text" id="myInput" placeholder="search...">
+        </div>
+        <div id="productContainer1" class="product">
+            <figure>
+                <img src="pics/anua1.jpg" alt="">
+                <figcaption><h3>Anua</h3></figcaption>
+                <figcaption>Peach 70 Niacin Serum 70% solution. 30mL</figcaption>
+                <figcaption>&#8369;169.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/anua2.jpg" alt="">
+                <figcaption><h3>Anua</h3></figcaption>
+                <figcaption>Niacinamide 10% + TXA 4% Dark Spot Correcting Serum. 30mL</figcaption>
+                <figcaption>&#8369;169.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/anua3.jpg" alt="">
+                <figcaption><h3>Anua</h3></figcaption>
+                <figcaption>Hyaluronic Serum Plus Hydration Booster Serum. 30mL</figcaption>
+                <figcaption>&#8369;169.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/garserum1.jpg" alt="">
+                <figcaption><h3>Garnier</h3></figcaption>
+                <figcaption>Uniform & Matte Antiacne Serum Booster. 30mL</figcaption>
+                <figcaption> &#8369;129.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/garserum2.jpg" alt="">
+                <figcaption><h3>Garnier</h3></figcaption>
+                <figcaption>Sakura White Hyaluron Serum 30X Serum Booster. 30mL</figcaption>
+                <figcaption>&#8369;129.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/garserum3.jpg" alt="">
+                <figcaption><h3>Garnier</h3></figcaption>
+                <figcaption>Uniform & Matte Vitamin C Serum Booster. 30mL</figcaption>
+                <figcaption>&#8369;129.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/ordinary2.jpg" alt="">
+                <figcaption><h3>The Ordinary</h3></figcaption>
+                <figcaption>High Strength Vitamin and Mineral Blemish Formula. 30mL</figcaption>
+                <figcaption>&#8369;199.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/ordinary3.jpg" alt="">
+                <figcaption><h3>The Ordinary</h3></figcaption>
+                <figcaption>10-Minute Exfoliating Facial Peeling Solution. 30mL</figcaption>
+                <figcaption>&#8369;199.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/ordinary4.jpg" alt="">
+                <figcaption><h3>The Ordinary</h3></figcaption>
+                <figcaption>High Strength Lactic Acid Superficial Peeling Formulation. 30mL</figcaption>
+                <figcaption>&#8369;199.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+        </div>
+    </div>
+
+    <div id="soap-page">
+        <div class="contain">
+            <h1>Soap</h1>
+            <input type="text" id="myInput1" placeholder="search...">
+        </div>
+        <div id="productContainer2" class="product">
+            <figure>
+                <img src="pics/dove1.jpg" alt="">
+                <figcaption><h3>Dove</h3></figcaption>
+                <figcaption>Purely Pampering Karite` y valnilla 1/4 de crema</figcaption>
+                <figcaption>&#8369;129.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/dove3.jpg" alt="">
+                <figcaption><h3>Dove</h3></figcaption>
+                <figcaption>Purely Pampering Relaxing Lavender Beauty Cream Bar</figcaption>
+                <figcaption>&#8369;120.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/dove4.jpg" alt="">
+                <figcaption><h3>Dove</h3></figcaption>
+                <figcaption>Pink Rosa Beauty Bar for Deep Moisture</figcaption>
+                <figcaption>&#8369;129.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/dove5.jpg" alt="">
+                <figcaption><h3>Dove</h3></figcaption>
+                <figcaption>Purely Pampering Beauty Bar with Pistachio Cream and Magnolia scent</figcaption>
+                <figcaption>&#8369;129.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/dove6.jpg" alt="">
+                <figcaption><h3>Dove</h3></figcaption>
+                <figcaption>White Beauty Bar for Deep Moisture 1/4 moisturizing cream</figcaption>
+                <figcaption>&#8369;129.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/soap1.jpg" alt="">
+                <figcaption><h3>Tokyo White</h3></figcaption>
+                <figcaption>Natural Whitening and Anti-Aging Face/Body Soap</figcaption>
+                <figcaption>&#8369;79.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/soap2.jpg" alt="">
+                <figcaption><h3>Olay</h3></figcaption>
+                <figcaption>Moisture Outlast Ultra Moisture with milk moisture</figcaption>
+                <figcaption>&#8369;49.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/soap3.jpg" alt="">
+                <figcaption><h3>Olay</h3></figcaption>
+                <figcaption>Moisture Outlast Ultra Moisture with Shea Butter</figcaption>
+                <figcaption>&#8369;49.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+        </div>
+    </div>
+
+    <div id="toner-page">
+        <div class="contain">
+            <h1>Toner</h1>
+            <input type="text" id="myInput2" placeholder="search...">
+        </div>
+        <div id="productContainer3" class="product">
+            <figure>
+                <img src="pics/toner1.jpg" alt="">
+                <figcaption><h3>Anua</h3></figcaption>
+                <figcaption>Heartleaf Soothing toner 77% solution. 250mL</figcaption>
+                <figcaption>&#8369;199.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner2.jpg" alt="">
+                <figcaption><h3>Anua</h3></figcaption>
+                <figcaption>Toner Heartleaf Soothing toner 77% solution. 100mL</figcaption>
+                <figcaption>&#8369;199.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner3.jpg" alt="">
+                <figcaption><h3>Madagascar Centella</h3></figcaption>
+                <figcaption>Tone Brightening Boosting Toner. 250mL</figcaption>
+                <figcaption>&#8369;250.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner4.jpg" alt="">
+                <figcaption><h3>E.L.F Skin</h3></figcaption>
+                <figcaption>Toner with Oat Milk, aloe Juice + niacinamide. 150mL</figcaption>
+                <figcaption>&#8369;220.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner5.jpg" alt="">
+                <figcaption><h3>E.L.F Skin</h3></figcaption>
+                <figcaption>Hydrating Water Essence for skin. 150mL</figcaption>
+                <figcaption>&#8369;220.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner6.jpg" alt="">
+                <figcaption><h3>E.L.F Skin</h3></figcaption>
+                <figcaption>Keep your Balance Hydrating Toner. 150mL</figcaption>
+                <figcaption>&#8369;220.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner7.jpg" alt="">
+                <figcaption><h3>Toner</h3></figcaption>
+                <figcaption>Green Plum Hydrating Toner for skin. 150mL</figcaption>
+                <figcaption>&#8369;159.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner8.jpg" alt="">
+                <figcaption><h3>SK-II</h3></figcaption>
+                <figcaption>Facial Treatment Clear Lotion for skin. 150mL</figcaption>
+                <figcaption>&#8369;250.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner9.jpg" alt="">
+                <figcaption><h3>Glow Toner</h3></figcaption>
+                <figcaption>Niacinamide + Poretight + peptide + Exfolactive. 150mL</figcaption>
+                <figcaption>&#8369;239.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+        </div>
+    </div>
+
+    <div id="foam-page">
+        <div class="contain">
+            <h1>Foam</h1>
+            <input type="text" id="myInput3" placeholder="search...">
+        </div>
+        <div id="productContainer4" class="product">
+            <figure>
+                <img src="pics/toner1.jpg" alt="">
+                <figcaption><h3>Anua</h3></figcaption>
+                <figcaption>Heartleaf Soothing toner 77% solution. 250mL</figcaption>
+                <figcaption>&#8369;199.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner2.jpg" alt="">
+                <figcaption><h3>Anua</h3></figcaption>
+                <figcaption>Toner Heartleaf Soothing toner 77% solution. 100mL</figcaption>
+                <figcaption>&#8369;199.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner3.jpg" alt="">
+                <figcaption><h3>Madagascar Centella</h3></figcaption>
+                <figcaption>Tone Brightening Boosting Toner. 250mL</figcaption>
+                <figcaption>&#8369;250.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner4.jpg" alt="">
+                <figcaption><h3>E.L.F Skin</h3></figcaption>
+                <figcaption>Toner with Oat Milk, aloe Juice + niacinamide. 150mL</figcaption>
+                <figcaption>&#8369;220.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner5.jpg" alt="">
+                <figcaption><h3>E.L.F Skin</h3></figcaption>
+                <figcaption>Hydrating Water Essence for skin. 150mL</figcaption>
+                <figcaption>&#8369;220.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner6.jpg" alt="">
+                <figcaption><h3>E.L.F Skin</h3></figcaption>
+                <figcaption>Keep your Balance Hydrating Toner. 150mL</figcaption>
+                <figcaption>&#8369;220.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner7.jpg" alt="">
+                <figcaption><h3>Toner</h3></figcaption>
+                <figcaption>Green Plum Hydrating Toner for skin. 150mL</figcaption>
+                <figcaption>&#8369;159.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner8.jpg" alt="">
+                <figcaption><h3>SK-II</h3></figcaption>
+                <figcaption>Facial Treatment Clear Lotion for skin. 150mL</figcaption>
+                <figcaption>&#8369;250.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner9.jpg" alt="">
+                <figcaption><h3>Glow Toner</h3></figcaption>
+                <figcaption>Niacinamide + Poretight + peptide + Exfolactive. 150mL</figcaption>
+                <figcaption >&#8369;239.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+        </div>
+    </div>
+
+    <div id="cream-page">
+        <div class="contain">
+            <h1>Cream</h1>
+            <input type="text" id="myInput4" placeholder="search...">
+        </div>
+        <div id="productContainer5" class="product">
+            <figure>
+                <img src="pics/toner1.jpg" alt="">
+                <figcaption><h3>Anua</h3></figcaption>
+                <figcaption>Heartleaf Soothing toner 77% solution. 250mL</figcaption>
+                <figcaption>&#8369;199.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner2.jpg" alt="">
+                <figcaption><h3>Anua</h3></figcaption>
+                <figcaption>Toner Heartleaf Soothing toner 77% solution. 100mL</figcaption>
+                <figcaption>&#8369;199.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner3.jpg" alt="">
+                <figcaption><h3>Madagascar Centella</h3></figcaption>
+                <figcaption>Tone Brightening Boosting Toner. 250mL</figcaption>
+                <figcaption>&#8369;250.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner4.jpg" alt="">
+                <figcaption><h3>E.L.F Skin</h3></figcaption>
+                <figcaption>Toner with Oat Milk, aloe Juice + niacinamide. 150mL</figcaption>
+                <figcaption>&#8369;220.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner5.jpg" alt="">
+                <figcaption><h3>E.L.F Skin</h3></figcaption>
+                <figcaption>Hydrating Water Essence for skin. 150mL</figcaption>
+                <figcaption>&#8369;220.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner6.jpg" alt="">
+                <figcaption><h3>E.L.F Skin</h3></figcaption>
+                <figcaption>Keep your Balance Hydrating Toner. 150mL</figcaption>
+                <figcaption>&#8369;220.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner7.jpg" alt="">
+                <figcaption><h3>Toner</h3></figcaption>
+                <figcaption>Green Plum Hydrating Toner for skin. 150mL</figcaption>
+                <figcaption>&#8369;159.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner8.jpg" alt="">
+                <figcaption><h3>SK-II</h3></figcaption>
+                <figcaption>Facial Treatment Clear Lotion for skin. 150mL</figcaption>
+                <figcaption>&#8369;250.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+            <figure>
+                <img src="pics/toner9.jpg" alt="">
+                <figcaption><h3>Glow Toner</h3></figcaption>
+                <figcaption>Niacinamide + Poretight + peptide + Exfolactive. 150mL</figcaption>
+                <figcaption >&#8369;239.00</figcaption>
+                <button>ADD TO CART</button>
+            </figure>
+        </div>
+    </div>
+
+    <div class="about-us" id="aboutUs">
         <div class="texts">
             <h3 class="a">ABOUT US</h3>
-            <h3>Our skincare products are very good on your skin. It makes your skin looks healthier and fresh!</h3>
+            <h3 class="b">Our skincare products are very good on your skin. It makes your skin looks healthier and fresh!</h3>
             <h3 class="b">Good for all skin types!</h3>
         </div>
     </div>
 
     <div class="footer">
-        
+        <h4>2024 © Copyright.CN Blog All Rights Reserved</h4>
     </div>
 
     <script src="script.js"></script>
