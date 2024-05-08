@@ -31,8 +31,10 @@
                 </ul>
             </div>
             <div class="user-cart">
-                <img class="nav-link" src="assets/shopping-cart.png" alt="" onclick="addToCart(document.getElementById('add-to-cart-container'))">
-                <img class="nav-link" src="assets/user.png" alt="" onclick="User(document.getElementById('user-container'))">
+                <div class="contain">
+                    <img class="nav-link" src="assets/shopping-cart.png" alt="" onclick="addToCart(document.getElementById('add-to-cart-container'))"><span id="cart-counter">0</span>
+                </div>
+                <img class="nav-link" src="assets/user.png" alt="" onclick="loginPage()">
             </div>
         </div>
 
@@ -47,37 +49,61 @@
         </div>
     </div>
 
-    <div class="user-container" id="user-container">
-        <div class="contain">
-            <h1>User Profile</h1>
-            <h2>You have not logged in!</h2>
-            <div>
-                <button id="login" onclick="loginPage()">Login</button>
-                <button id="sign-up" onclick="signUpPage()">Sign-up</button>
-            </div>
-        </div>
-    </div>
-
     <div class="sign-up-container" id="sign-up-container">
         <div class="contain">
+            <img src="assets/close.png" alt="" onclick="signUpCloseBtn()">
             <h1>Sign-up</h1>
             <h4>Basic Info</h4>
-            <input type="text" id="name" placeholder="Name">
-            <input type="text" id="contact" placeholder="Contact">
-            <textarea name="Address" id="address" placeholder="Address"></textarea>
+            <input type="text" id="name" placeholder="Name" autocomplete="name">
+            <input type="tel" id="contact" placeholder="Contact No.">
+            <textarea name="Address" id="address" placeholder="Address" autocomplete="street-address"></textarea>
             <h4>Login Credentials</h4>
-            <input type="text" id="username" placeholder="Username">
-            <input type="password" id="password" placeholder="Password">
+            <input type="email" id="email1" placeholder="Email Address">
+            <input type="password" id="password1" placeholder="Password">
+            <input type="password" id="password2" placeholder="Re-Enter Password">
+            <div class="terms">
+                <input type="checkbox" id="terms"><label for="terms">I agree to the terms and conditions.</label>
+            </div>
             <button onclick="signUp()">Sign Up</button>
+            <p>Already have an account?</p>
+            <a onclick="loginPage()">Login Here</a>
         </div>
     </div>
 
     <div class="login-container" id="login-container">
         <div class="contain">
+            <img src="assets/close.png" alt="" onclick="loginCloseBtn()">
             <h1>Login</h1>
-            <input type="text" id="username" placeholder="Username">
+            <input type="email" id="email" placeholder="Email Address" autocomplete="email">
             <input type="password" id="password" placeholder="Password">
             <button onclick="login()">Login</button>
+            <p>Don't have an account?</p>
+            <a onclick="signUpPage()">Sign-Up Here</a>
+        </div>
+    </div>
+
+    <div class="profile-container" id="profile-container">
+        <div class="contain">
+            <div class="profile">
+                <img src="pics/bb.jpg" alt="">
+            </div>
+            <div class="details">
+                <h1>User Profile</h1>
+                <div class="wrap">
+                    <div>
+                        <label for="name">Fullname</label>
+                        <h3 id="name">a</h3>
+                        <label for="contact">Contact No.</label>
+                    <h3 id="contact">a</h3>
+                    </div>
+                    <div>
+                        <label for="address">Address</label>
+                        <h3 id="address">a</h3>
+                        <label for="email">Email</label>
+                        <h3 id="email">a</h3>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
 

@@ -92,10 +92,29 @@ a{
     margin: 6px 0;
 }
 
+.navigation-holder .user-cart{
+    display: flex;
+}
+
+.navigation-holder .user-cart .contain{
+    position: relative;
+}
+
 .navigation-holder .user-cart img{
     width: 25px;
     height: auto;
     margin: 0 1dvw;
+}
+
+.navigation-holder .user-cart span{
+    position: absolute;
+    top: -40%;
+    right: 0;
+    background-color: #f77272;
+    padding: 0px 5px;
+    border-radius: 50%;
+    font-weight: 600;
+    color: white;
 }
 
 .menu-bar{
@@ -217,29 +236,43 @@ a{
 .add-to-cart-container{
     display: none;
     position: relative;
-    height: 100vh;
 }
 
-.add-to-cart-container .contain{
+.add-to-cart-container .contain .item{
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust min-width as needed */
+    gap: 20px; /* Adjust gap between items as needed */
+    justify-items: center; /* Align items in the center horizontally */
+    align-items: center; /* Align items at the top vertically */
+    border: 2px solid #CEBBA3;
+    margin: 1dvw 0;
+}
+
+.add-to-cart-container .contain .item img{
+    width: 100px;
+    height: 100px;
+}
+
+.add-to-cart-container .contain .item .plus , .minus{
+    padding: 0px 5px;
+    margin: 1dvw 1dvw;
+}
+
+.add-to-cart-container .contain .item .quantity{
     display: flex;
     align-items: center;
-    flex-direction: column;
+    text-align: center;
+}
+
+.add-to-cart-container .contain h1 {
+    text-align: center;
+}
+
+.add-to-cart-container .contain p {
+    margin: 5px 0;
 }
 /* ----------------------------------------AddtoCart----------------------------------------- */
 
-/* ----------------------------------------User----------------------------------------- */
-.user-container{
-    display: none;
-    height: 100vh;
-}
-
-.user-container .contain{
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-}
-
-/* ----------------------------------------User----------------------------------------- */
 
 /* ----------------------------------------------BODY---------------------------------------- */
 
@@ -402,41 +435,118 @@ a{
 
 /* ----------------------------------------LOGIN--------------------------------------------------- */
 .login-container{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
     height: 100vh;
     display: none;
+    background-color: rgba(0, 0, 0, 0.493);
 }
 
 .login-container .contain{
+    position: relative;
+    width: 500px;
+    padding: 1dvw 1dvw;
+    left: 50%;
+    top: 30%;
+    transform: translate(-50% , -50%);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    background-color: rgba(255, 255, 255, 0.808);
+    animation: slideDown 0.5s;
 }
 
-.login-container .contain input[type=text] , .login-container .contain input[type=password]{
-    display: inline-block;
-    width: 30%;
+.login-container .contain img{
+    width: 20px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.login-container .contain input[type=email] , .login-container .contain input[type=password], .login-container .contain button{
+    display: inline;
     padding: 0.5dvw 1dvw;
     margin: 0.5dvw;
+}
+
+.login-container .contain a:hover{
+    text-decoration: underline;
+}
+
+@keyframes slideDown{
+    from{
+        top: 0;
+        width: 20%;
+        opacity: 0.5;
+    }
+
+    to{
+        top: 30%;
+        width: 500px;
+        opacity: 1;
+    }
 }
 /* ----------------------------------------LOGIN--------------------------------------------------- */
 
 /* ----------------------------------------SIGNUP--------------------------------------------------- */
 .sign-up-container{
+    position: fixed;
+    z-index: 99;
+    width: 100%;
     height: 100vh;
     display: none;
+    background-color: rgba(0, 0, 0, 0.493);
 }
 
 .sign-up-container .contain{
+    position: relative;
+    width: 40dvw;
+    padding: 1dvw 1dvw;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50% , -50%);
     display: flex;
     flex-direction: column;
-    align-items: center;
+    text-align: center;
+    background-color: rgb(255, 255, 255);
+    animation: Slidedown 0.5s;
 }
 
-.sign-up-container .contain input[type=text] , .sign-up-container .contain input[type=password], .sign-up-container .contain textarea{
+.sign-up-container .contain img{
+    width: 20px;
+    position: absolute;
+    right: 10px;
+    cursor: pointer;
+}
+
+.sign-up-container input[type=text], .sign-up-container input[type=email] , .sign-up-container input[type=tel], .sign-up-container input[type=password], .sign-up-container  textarea , .sign-up-container button {
     display: inline-block;
-    width: 30%;
     padding: 0.5dvw 1dvw;
     margin: 0.5dvw;
+}
+
+.sign-up-container .contain a:hover{
+    text-decoration: underline;
+}
+
+.sign-up-container .contain .terms{
+    margin: 1dvw 0;
+    
+}
+
+@keyframes Slidedown {
+    from{
+        top: 0;
+        width: 20%;
+        opacity: 0.5;
+    }
+    to{
+        top: 40%;
+        width: 40dvw;
+        opacity: 1;
+    }
+    
 }
 /* ----------------------------------------SIGNUP--------------------------------------------------- */
 
@@ -464,7 +574,65 @@ a{
     padding: 0.8dvw 1dvw;
     font-size: 16px;
 }
+
 /* ------------------------------------ADD PRODUCT------------------------------------------ */
+
+/* -----------------------------------------Profile------------------------------------------ */
+.profile-container{
+    display: none;
+    position: absolute;
+    position: fixed;
+    width: 100%;
+    height: 100%;
+    z-index: 98;
+    background-color: #EBE7E5;
+}
+
+.profile-container .contain{
+    display: flex;
+    justify-content: center;
+    padding: 4dvw 2dvw;
+}
+
+.profile-container .contain .profile{
+    padding: 0 2dvw;
+}
+
+.profile-container .contain .profile img{
+    width: 300px;
+    height: 300px;
+    border: 5px double rgba(128, 128, 128, 0.527);
+    border-radius: 50%;
+}
+
+.profile-container .contain .details{
+    padding: 0 2dvw;
+    
+}
+
+.profile-container .contain .details .wrap{
+    display: flex;
+}
+
+.profile-container .contain .details .wrap div{
+    margin: 1dvw 1dvw;
+}
+
+.profile-container .contain .details .wrap div h3{
+    background-color: rgba(128, 128, 128, 0.397);
+    font-weight: 500;
+    border-radius: 10px;
+    color: black;
+    padding: 10px 20px;
+    width: 300px;
+}
+
+.profile-container .close-btn{
+    width: 30px;
+    position: absolute;
+    right: 0;
+}
+/* -----------------------------------------Profile------------------------------------------ */
 
 /* ---------------------------------------SERUM----------------------------------------- */
 #serum-page{

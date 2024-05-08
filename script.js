@@ -96,9 +96,6 @@ const home = (target) =>{
     const cartContainer = document.getElementById('add-to-cart-container')
     cartContainer.style.display = 'none'
 
-    const userContainer = document.getElementById('user-container')
-    userContainer.style.display = 'none'
-
     const serum = document.getElementById('serum-page')
     serum.style.display = 'none'
 
@@ -116,6 +113,9 @@ const home = (target) =>{
 
     const addProduct = document.getElementById('add-product')
     addProduct.style.display = 'none'
+
+    const profileContainer = document.getElementById('profile-container')
+    profileContainer.style.display = 'none'
 
 
         let scrollContainer = target;
@@ -156,9 +156,6 @@ const addToCart = (target) =>{
     const cartContainer = document.getElementById('add-to-cart-container')
     cartContainer.style.display = 'block'
 
-    const userContainer = document.getElementById('user-container')
-    userContainer.style.display = 'none'
-
     const serum = document.getElementById('serum-page')
     serum.style.display = 'none'
 
@@ -176,6 +173,9 @@ const addToCart = (target) =>{
 
     const addProduct = document.getElementById('add-product')
     addProduct.style.display = 'none'
+
+    const profileContainer = document.getElementById('profile-container')
+    profileContainer.style.display = 'none'
 
     let scrollContainer = target;
         do { //find scroll container
@@ -199,140 +199,6 @@ const addToCart = (target) =>{
         scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
 }
 
-const loginPage = () =>{
-    const homepageContainer = document.getElementById('homepage')
-    homepageContainer.style.display = 'none'
-
-    const aboutus = document.getElementById('aboutUs')
-    aboutus.style.display = 'none'
-
-    const loginContainer = document.getElementById('login-container')
-    loginContainer.style.display = 'block'
-
-    const signupContainer = document.getElementById('sign-up-container')
-    signupContainer.style.display = 'none'
-
-    const cartContainer = document.getElementById('add-to-cart-container')
-    cartContainer.style.display = 'none'
-
-    const userContainer = document.getElementById('user-container')
-    userContainer.style.display = 'none'
-
-    const serum = document.getElementById('serum-page')
-    serum.style.display = 'none'
-
-    const soap = document.getElementById('soap-page')
-    soap.style.display = 'none'
-
-    const toner = document.getElementById('toner-page')
-    toner.style.display = 'none'
-
-    const foam = document.getElementById('foam-page')
-    foam.style.display = 'none'
-
-    const cream = document.getElementById('cream-page')
-    cream.style.display = 'none'
-
-    const addProduct = document.getElementById('add-product')
-    addProduct.style.display = 'none'
-}
-
-const signUpPage = () =>{
-    const homepageContainer = document.getElementById('homepage')
-    homepageContainer.style.display = 'none'
-
-    const aboutus = document.getElementById('aboutUs')
-    aboutus.style.display = 'none'
-
-    const loginContainer = document.getElementById('login-container')
-    loginContainer.style.display = 'none'
-
-    const signupContainer = document.getElementById('sign-up-container')
-    signupContainer.style.display = 'block'
-
-    const cartContainer = document.getElementById('add-to-cart-container')
-    cartContainer.style.display = 'none'
-
-    const userContainer = document.getElementById('user-container')
-    userContainer.style.display = 'none'
-
-    const serum = document.getElementById('serum-page')
-    serum.style.display = 'none'
-
-    const soap = document.getElementById('soap-page')
-    soap.style.display = 'none'
-
-    const toner = document.getElementById('toner-page')
-    toner.style.display = 'none'
-
-    const foam = document.getElementById('foam-page')
-    foam.style.display = 'none'
-
-    const cream = document.getElementById('cream-page')
-    cream.style.display = 'none'
-
-    const addProduct = document.getElementById('add-product')
-    addProduct.style.display = 'none'
-}
-
-const User = (target) =>{
-    const homepageContainer = document.getElementById('homepage')
-    homepageContainer.style.display = 'none'
-
-    const aboutus = document.getElementById('aboutUs')
-    aboutus.style.display = 'none'
-
-    const loginContainer = document.getElementById('login-container')
-    loginContainer.style.display = 'none'
-
-    const signupContainer = document.getElementById('sign-up-container')
-    signupContainer.style.display = 'none'
-
-    const cartContainer = document.getElementById('add-to-cart-container')
-    cartContainer.style.display = 'none'
-
-    const userContainer = document.getElementById('user-container')
-    userContainer.style.display = 'block'
-
-    const serum = document.getElementById('serum-page')
-    serum.style.display = 'none'
-
-    const soap = document.getElementById('soap-page')
-    soap.style.display = 'none'
-
-    const toner = document.getElementById('toner-page')
-    toner.style.display = 'none'
-
-    const foam = document.getElementById('foam-page')
-    foam.style.display = 'none'
-
-    const cream = document.getElementById('cream-page')
-    cream.style.display = 'none'
-
-    const addProduct = document.getElementById('add-product')
-    addProduct.style.display = 'none'
-
-    let scrollContainer = target;
-        do { //find scroll container
-            scrollContainer = scrollContainer.parentNode;
-            if (!scrollContainer) return;
-            scrollContainer.scrollTop += 1;
-        } while (scrollContainer.scrollTop == 0);
-    
-        let targetY = 0;
-        do { //find the top of target relatively to the container
-            if (target == scrollContainer) break;
-            targetY += target.offsetTop;
-        } while (target = target.offsetParent);
-    
-        scroll = function(c, a, b, i) {
-            i++; if (i > 30) return;
-            c.scrollTop = a + (b - a) / 30 * i;
-            setTimeout(function(){ scroll(c, a, b, i); }, 1);
-        }
-        // start scrolling
-        scroll(scrollContainer, scrollContainer.scrollTop, targetY, 0);
-}
 
 //searchbar for serum
 document.getElementById("myInput").addEventListener("keyup", function () {
@@ -437,9 +303,6 @@ const serumPage = (target) =>{
     const cartContainer = document.getElementById('add-to-cart-container')
     cartContainer.style.display = 'none'
 
-    const userContainer = document.getElementById('user-container')
-    userContainer.style.display = 'none'
-
     const serum = document.getElementById('serum-page')
     serum.style.display = 'block'
 
@@ -457,6 +320,9 @@ const serumPage = (target) =>{
 
     const addProduct = document.getElementById('add-product')
     addProduct.style.display = 'none'
+
+    const profileContainer = document.getElementById('profile-container')
+    profileContainer.style.display = 'none'
 
     let scrollContainer = target;
         do { //find scroll container
@@ -496,9 +362,6 @@ const soapPage = (target) =>{
     const cartContainer = document.getElementById('add-to-cart-container')
     cartContainer.style.display = 'none'
 
-    const userContainer = document.getElementById('user-container')
-    userContainer.style.display = 'none'
-
     const serum = document.getElementById('serum-page')
     serum.style.display = 'none'
 
@@ -516,6 +379,9 @@ const soapPage = (target) =>{
 
     const addProduct = document.getElementById('add-product')
     addProduct.style.display = 'none'
+
+    const profileContainer = document.getElementById('profile-container')
+    profileContainer.style.display = 'none'
 
     let scrollContainer = target;
         do { //find scroll container
@@ -555,9 +421,6 @@ const tonerPage = (target) =>{
     const cartContainer = document.getElementById('add-to-cart-container')
     cartContainer.style.display = 'none'
 
-    const userContainer = document.getElementById('user-container')
-    userContainer.style.display = 'none'
-
     const serum = document.getElementById('serum-page')
     serum.style.display = 'none'
 
@@ -575,6 +438,9 @@ const tonerPage = (target) =>{
 
     const addProduct = document.getElementById('add-product')
     addProduct.style.display = 'none'
+
+    const profileContainer = document.getElementById('profile-container')
+    profileContainer.style.display = 'none'
 
     let scrollContainer = target;
         do { //find scroll container
@@ -614,9 +480,6 @@ const foamPage = (target) =>{
     const cartContainer = document.getElementById('add-to-cart-container')
     cartContainer.style.display = 'none'
 
-    const userContainer = document.getElementById('user-container')
-    userContainer.style.display = 'none'
-
     const serum = document.getElementById('serum-page')
     serum.style.display = 'none'
 
@@ -634,6 +497,9 @@ const foamPage = (target) =>{
 
     const addProduct = document.getElementById('add-product')
     addProduct.style.display = 'none'
+
+    const profileContainer = document.getElementById('profile-container')
+    profileContainer.style.display = 'none'
 
     let scrollContainer = target;
         do { //find scroll container
@@ -673,9 +539,6 @@ const creamPage = (target) =>{
     const cartContainer = document.getElementById('add-to-cart-container')
     cartContainer.style.display = 'none'
 
-    const userContainer = document.getElementById('user-container')
-    userContainer.style.display = 'none'
-
     const serum = document.getElementById('serum-page')
     serum.style.display = 'none'
 
@@ -693,6 +556,9 @@ const creamPage = (target) =>{
 
     const addProduct = document.getElementById('add-product')
     addProduct.style.display = 'none'
+
+    const profileContainer = document.getElementById('profile-container')
+    profileContainer.style.display = 'none'
 
     let scrollContainer = target;
         do { //find scroll container
@@ -888,3 +754,261 @@ function displayProduct() {
 
 // Add event listener to Add Product button
 document.getElementById('addProductBtn').addEventListener('click', addProduct);
+
+
+//------------------------------------------For login and signup and credentials----------------------------
+//database
+let users = [];
+let temp = [];
+
+// Function to display user profile in HTML
+function displayUserProfile() {
+    let user = temp[0]
+
+    // Accessing wrap element
+    const wrapElement = document.querySelector(".wrap");
+
+    // Accessing h3 elements inside wrap
+    const nameH3 = wrapElement.querySelector("#name");
+    const contactH3 = wrapElement.querySelector("#contact");
+    const addressH3 = wrapElement.querySelector("#address");
+    const emailH3 = wrapElement.querySelector("#email");
+
+    // Set text content of h3 elements
+    nameH3.textContent = user.name;
+    contactH3.textContent = user.contact;
+    addressH3.textContent = user.address;
+    emailH3.textContent = user.email;
+}
+
+//for showing and hiding the page
+const loginPage = () =>{
+    if (temp.length === 0) {
+    const loginContainer = document.getElementById('login-container')
+    loginContainer.style.display = 'block'
+
+    const signupContainer = document.getElementById('sign-up-container')
+    signupContainer.style.display = 'none'
+    }
+
+    else{
+        const profile = document.getElementById('profile-container')
+        profile.style.display = 'block'
+
+        const input = document.getElementById('serum-page')
+        input.style.display = 'none'
+
+        const input1 = document.getElementById('soap-page')
+        input1.style.display = 'none'
+
+        const input2 = document.getElementById('toner-page')
+        input2.style.display = 'none'
+
+        const input3 = document.getElementById('foam-page')
+        input3.style.display = 'none'
+
+        const input4 = document.getElementById('cream-page')
+        input4.style.display = 'none'
+
+        const homepage = document.getElementById('homepage')
+        homepage.style.display = 'none'
+
+        const about = document.getElementById('aboutUs')
+        about.style.display = 'none'
+
+    }
+}
+
+const loginCloseBtn = () =>{
+    const loginContainer = document.getElementById('login-container')
+    loginContainer.style.display = 'none'
+}
+
+const signUpPage = () =>{
+    const loginContainer = document.getElementById('login-container')
+    loginContainer.style.display = 'none'
+
+    const signupContainer = document.getElementById('sign-up-container')
+    signupContainer.style.display = 'block'
+}
+
+const signUpCloseBtn = () =>{
+    const signupContainer = document.getElementById('sign-up-container')
+    signupContainer.style.display = 'none'
+}   
+
+//for validation 
+
+function signUp() {
+    let name = document.getElementById("name").value;
+    let contact = document.getElementById("contact").value;
+    let address = document.getElementById("address").value;
+    let email = document.getElementById("email1").value;
+    let password = document.getElementById("password1").value;
+    let password2 = document.getElementById("password2").value;
+
+     // Check if any required field is empty
+     if (!name || !contact || !address || !email || !password || !password2) {
+        alert("Please fill in all required fields");
+        return;
+    }
+
+    // Check if passwords match
+    if (password !== password2) {
+        alert("Passwords do not match");
+        return;
+    }
+
+    // Check if email already exists
+    if (users.find(user => user.email === email)) {
+        alert("Email already exists");
+        return;
+    }
+
+    // Create user object
+    let user = {
+        name: name,
+        contact: contact,
+        address: address,
+        email: email,
+        password: password
+    };
+
+    // Add user to array
+    users.push(user);
+    alert("Sign up successful");
+    
+    const loginContainer = document.getElementById('login-container')
+    loginContainer.style.display = 'block'
+
+    const signupContainer = document.getElementById('sign-up-container')
+    signupContainer.style.display = 'none'
+}
+
+function login() {
+    let email = document.getElementById("email").value;
+    let password = document.getElementById("password").value;
+
+    // Check if any required field is empty
+    if (!email || !password) {
+        alert("Please fill in all required fields");
+        return;
+    }
+
+    // Find user by email
+    let user = users.find(user => user.email === email);
+
+    if (!user) {
+        alert("User not found");
+        return;
+    }
+
+    // Check password
+    if (user.password !== password) {
+        alert("Incorrect password");
+        return;
+    }
+    
+    temp.push(user)
+
+    alert("Login successful");
+
+    const loginContainer = document.getElementById('login-container')
+    displayUserProfile()
+    loginContainer.style.display = 'none'
+}
+
+
+
+//---------------------------------------add to cart function -------------------------------------------------
+
+//initialize cartCounter
+let cartCounter = 0
+
+function addtoCart(event) {
+    if (temp.length === 0) {
+        // If no user is logged in, show the login page
+        const loginContainer = document.getElementById('login-container');
+        loginContainer.style.display = 'block';
+        alert("Please login to add items to the cart.");
+    } else {
+        // If user is logged in, get details of the clicked item
+        const productContainer = event.target.closest('figure');
+        const itemDetails = {
+            image: productContainer.querySelector('img').src,
+            title: productContainer.querySelector('figcaption h3').textContent,
+            description: productContainer.querySelector('figcaption:nth-of-type(2)').textContent,
+            price: productContainer.querySelector('figcaption:nth-of-type(3)').textContent
+        };
+
+        // Check if item already exists in the cart
+        const cartItems = document.querySelectorAll('.item');
+        for (let item of cartItems) {
+            const titleElement = item.querySelector('p:nth-of-type(1)');
+            if (titleElement && titleElement.textContent === itemDetails.description) {
+                alert("This item is already in the cart.");
+                return;
+            }
+        }
+
+        // Update HTML with item details and quantity selectors
+        const addToCartContainer = document.getElementById('add-to-cart-container');
+        const itemElement = document.createElement('div');
+        itemElement.classList.add('item');
+        itemElement.innerHTML = `
+            <img src="${itemDetails.image}" alt="${itemDetails.title}">
+            <div>
+                <h3>${itemDetails.title}</h3>
+                <p>${itemDetails.description}</p>
+            </div>
+            <p>${itemDetails.price}</p>
+            <div>
+                <h3 style="text-align: center; margin: 1px;">Quantity</h3>
+                <div class="quantity">
+                    <button class="minus">-</button>
+                    <span>1</span>
+                    <button class="plus">+</button>
+                </div>
+            </div>
+        `;
+        addToCartContainer.querySelector('.contain').appendChild(itemElement);
+
+        // Increment counter and update display
+        cartCounter++;
+        document.getElementById('cart-counter').textContent = cartCounter;
+
+        alert("Item added to cart!");
+    }
+}
+
+// Function to handle plus button click
+function increaseQuantity(event) {
+    const quantityElement = event.target.parentElement.querySelector('span');
+    let quantity = parseInt(quantityElement.textContent);
+    quantity++;
+    quantityElement.textContent = quantity;
+}
+
+// Function to handle minus button click
+function decreaseQuantity(event) {
+    const quantityElement = event.target.parentElement.querySelector('span');
+    let quantity = parseInt(quantityElement.textContent);
+    if (quantity > 1) {
+        quantity--;
+        quantityElement.textContent = quantity;
+    }
+}
+
+// Event delegation to handle plus and minus button clicks
+document.getElementById('add-to-cart-container').addEventListener('click', function(event) {
+    if (event.target.classList.contains('plus')) {
+        increaseQuantity(event);
+    } else if (event.target.classList.contains('minus')) {
+        decreaseQuantity(event);
+    }
+});
+
+// Attach event listeners to Add to Cart buttons
+document.querySelectorAll('.product button').forEach(button => {
+    button.addEventListener('click', addtoCart);
+});
