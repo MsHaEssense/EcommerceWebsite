@@ -130,6 +130,9 @@ const home = (target) =>{
     const profileContainer = document.getElementById('profile-container')
     profileContainer.style.display = 'none'
 
+    const footer = document.getElementById('footer')
+    footer.style.display = 'block'
+
 
         let scrollContainer = target;
         do { //find scroll container
@@ -181,6 +184,9 @@ const addToCart = (target) =>{
         const cream = document.getElementById('cream-page')
         cream.style.display = 'none'
 
+        const footer = document.getElementById('footer')
+        footer.style.display = 'none'
+
         const profileContainer = document.getElementById('profile-container')
         profileContainer.style.display = 'none'
     }else{
@@ -219,6 +225,9 @@ const addToCart = (target) =>{
 
         const profileContainer = document.getElementById('profile-container')
         profileContainer.style.display = 'none'
+
+        const footer = document.getElementById('footer')
+        footer.style.display = 'none'
 
         let scrollContainer = target;
             do { //find scroll container
@@ -368,6 +377,9 @@ const serumPage = (target) =>{
     const profileContainer = document.getElementById('profile-container')
     profileContainer.style.display = 'none'
 
+    const footer = document.getElementById('footer')
+    footer.style.display = 'block'
+
     let scrollContainer = target;
         do { //find scroll container
             scrollContainer = scrollContainer.parentNode;
@@ -426,6 +438,9 @@ const soapPage = (target) =>{
 
     const profileContainer = document.getElementById('profile-container')
     profileContainer.style.display = 'none'
+
+    const footer = document.getElementById('footer')
+    footer.style.display = 'block'
 
     let scrollContainer = target;
         do { //find scroll container
@@ -486,6 +501,9 @@ const tonerPage = (target) =>{
     const profileContainer = document.getElementById('profile-container')
     profileContainer.style.display = 'none'
 
+    const footer = document.getElementById('footer')
+    footer.style.display = 'block'
+
     let scrollContainer = target;
         do { //find scroll container
             scrollContainer = scrollContainer.parentNode;
@@ -545,6 +563,9 @@ const foamPage = (target) =>{
     const profileContainer = document.getElementById('profile-container')
     profileContainer.style.display = 'none'
 
+    const footer = document.getElementById('footer')
+    footer.style.display = 'block'
+
     let scrollContainer = target;
         do { //find scroll container
             scrollContainer = scrollContainer.parentNode;
@@ -603,6 +624,9 @@ const creamPage = (target) =>{
 
     const profileContainer = document.getElementById('profile-container')
     profileContainer.style.display = 'none'
+
+    const footer = document.getElementById('footer')
+    footer.style.display = 'block'
 
     let scrollContainer = target;
         do { //find scroll container
