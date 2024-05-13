@@ -32,7 +32,7 @@
             </div>
             <div class="user-cart">
                 <div class="contain">
-                    <img class="nav-link" src="assets/shopping-cart.png" alt="" onclick="addToCart(document.getElementById('add-to-cart-container'))"><span id="cart-counter">0</span>
+                    <img id="product_icon" class="nav-link" src="assets/shopping-cart.png" alt="" onclick="addToCart(document.getElementById('add-to-cart-container'))"><span id="cart-counter">0</span>
                 </div>
                 <img class="nav-link" src="assets/user.png" alt="" onclick="loginPage()">
             </div>
@@ -40,13 +40,6 @@
 
         
         <img src="assets/menu-bar.png" class="menu-bar" id="rotate" onclick="toggleMenu()">
-    </div>
-
-
-    <div class="add-to-cart-container" id="add-to-cart-container">
-        <div class="contain">
-            <h1>Add to Cart</h1>
-        </div>
     </div>
 
     <div class="sign-up-container" id="sign-up-container">
@@ -82,6 +75,10 @@
         </div>
     </div>
 
+    <div class="cart-popup" id="logout-popup">
+        <h1>Successfully logged out!</h1>
+    </div>
+
     <div class="profile-container" id="profile-container">
         <div class="contain">
             <div class="profile">
@@ -103,8 +100,23 @@
                         <h3 id="email">a</h3>
                     </div>
                 </div>
+                <button onclick="logout()">Logout</button>
             </div>
         </div>
+    </div>
+
+    <div class="add-to-cart-container" id="add-to-cart-container">
+        <div class="contain">
+            <h1>Add to Cart</h1>
+        </div>
+        <div class="checkout"> 
+            <p id="overall-price">Overall Price: ₱0.00</p> 
+            <button>Check Out</button>
+        </div>
+    </div>
+    
+    <div class="cart-popup" id="cart-popup">
+        <h1>Added to Cart!</h1>
     </div>
 
     <div class="add-product" id="add-product">
@@ -530,9 +542,30 @@
     <div class="about-us" id="aboutUs">
         <div class="texts">
             <h3 class="a">ABOUT US</h3>
-            <h3 class="b">Our skincare products are very good on your skin. It makes your skin looks healthier and fresh!</h3>
-            <h3 class="b">Good for all skin types!</h3>
+            <h3 class="b">Welcome to Adora Skincare, your premier destination for curated skincare products 
+                from top brands around the globe. At Adora, we believe that everyone deserves to experience 
+                the transformative power of high-quality skincare, which is why we've handpicked a selection 
+                of the finest products to elevate your skincare routine.
+
+                Founded on the principle of providing exceptional skincare solutions, Adora Skincare serves 
+                as a gateway to a world of radiant, healthy skin. We understand that each individual's skin 
+                is unique, and our diverse range of products caters to a variety of skin types and concerns.
+                
+                Our commitment lies in offering a carefully curated collection of products that are backed 
+                by science, efficacy, and innovation. From luxurious serums to nourishing creams, every 
+                item in our inventory has been meticulously selected to deliver visible results and an 
+                indulgent skincare experience.</h3>
+
+            <h3 class="b">Thank you for choosing Adora Skincare as your trusted source for premium skincare 
+                essentials. We invite you to explore our collection, discover new favorites, and embark on 
+                a journey to healthier, more radiant skin.
+
+                Elevate your skincare routine with Adora Skincare today.</h3>
         </div>
+    </div>
+
+    <div class="contact-us">
+        
     </div>
 
     <div class="footer">

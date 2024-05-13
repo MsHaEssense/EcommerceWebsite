@@ -238,6 +238,10 @@ a{
     position: relative;
 }
 
+.add-to-cart-container .contain{
+    margin-bottom: 50px;
+}
+
 .add-to-cart-container .contain .item{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr)); /* Adjust min-width as needed */
@@ -246,16 +250,31 @@ a{
     align-items: center; /* Align items at the top vertically */
     border: 2px solid #CEBBA3;
     margin: 1dvw 0;
+    padding: 1dvw 0;
 }
 
 .add-to-cart-container .contain .item img{
     width: 100px;
     height: 100px;
 }
+.add-to-cart-container .checkout{
+    background-color: #f8e8c4;
+    width: 100%;
+    position: fixed;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 3dvw;
+    justify-content: right;
+}
+
+.add-to-cart-container .checkout button{
+    margin-right: 4dvw;
+}
 
 .add-to-cart-container .contain .item .plus , .minus{
-    padding: 0px 5px;
-    margin: 1dvw 1dvw;
+    padding: 0px 7px;
+    margin: 0 1dvw;
 }
 
 .add-to-cart-container .contain .item .quantity{
@@ -268,9 +287,43 @@ a{
     text-align: center;
 }
 
-.add-to-cart-container .contain p {
-    margin: 5px 0;
+.add-to-cart-container .contain p , .quantity {
+    margin: 15px 0;
 }
+
+/* -----------------------------popup part of add to cart--------------------------- */
+.cart-popup{
+    display: none;
+    background-color: #EBE7E5;
+    border-radius: 10px;
+    padding: 20px 20px;
+    position: absolute;
+    position: fixed;
+    top: 20%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+    z-index: 99;
+    animation: popup 1s;
+}
+
+.cart-popup h1{
+    font-weight: 400;
+    font-size: 20px;
+}
+
+@keyframes popup {
+    from{
+        top: 10%;
+        opacity: 0.5;
+    }
+    to{
+        top: 20%;
+        opacity: 1;
+    }
+    
+}
+
 /* ----------------------------------------AddtoCart----------------------------------------- */
 
 
@@ -501,7 +554,7 @@ a{
 
 .sign-up-container .contain{
     position: relative;
-    width: 40dvw;
+    width: 500px;
     padding: 1dvw 1dvw;
     left: 50%;
     top: 40%;
@@ -509,7 +562,7 @@ a{
     display: flex;
     flex-direction: column;
     text-align: center;
-    background-color: rgb(255, 255, 255);
+    background-color: rgba(255, 255, 255, 0.808);
     animation: Slidedown 0.5s;
 }
 
@@ -543,7 +596,7 @@ a{
     }
     to{
         top: 40%;
-        width: 40dvw;
+        width: 500px;
         opacity: 1;
     }
     
@@ -581,15 +634,14 @@ a{
 .profile-container{
     display: none;
     position: absolute;
-    position: fixed;
     width: 100%;
-    height: 100%;
     z-index: 98;
     background-color: #EBE7E5;
 }
 
 .profile-container .contain{
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
     padding: 4dvw 2dvw;
 }
@@ -607,11 +659,11 @@ a{
 
 .profile-container .contain .details{
     padding: 0 2dvw;
-    
 }
 
 .profile-container .contain .details .wrap{
     display: flex;
+    flex-wrap: wrap;
 }
 
 .profile-container .contain .details .wrap div{
@@ -1138,29 +1190,27 @@ a{
 
 /* ----------------------------------------ABOUT US---------------------------------------------- */
 .about-us{
-    background-image: url(assets/picures/HOME-transformed.jpeg);
-    background-position: -30dvw;
+    background-image: url(pics/c1.jpg);
+    background-position: -78dvw;
+
     background-size: cover;
-    height: 60dvw;
+    height: 100dvw;
     position: relative;
 }
 
 .about-us .texts{
     position: absolute;
-    width: 40%;
+    width: 50%;
     right: 10%;
-    top: -5%;
-}
-
-.about-us .texts h3{
-    font-size: 3dvw;
+    top: 0%;
 }
 
 .about-us .texts .a{
     margin: 3dvw 0;
-    font-size: 3dvw;
 }
 .about-us .texts .b{
+    font-weight: 400;
+    text-align: justify;
     margin: 5dvw 0;
 }
 /* ------------------------------------------FOOTER--------------------------------------------- */
